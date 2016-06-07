@@ -20,6 +20,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 
 public class TokenizerMain {
 	
+	
 	public static void main( String[] args ) throws Exception{
 		// the provided model
 		// InputStream modelIn = new FileInputStream( "models/en-token.bin" );
@@ -52,17 +53,19 @@ public class TokenizerMain {
 				tokens = tokenizer.tokenize(cadena);
 				
 				for(int i=0;i<tokens.length;i++){
-			//	for( String token : tokens ){
-				System.out.println(tokens[i]);
-			//	out.write(token);
+				for( String token : tokens ){
+				out.write(token);
 				for (int j = 0; j < tokens.length; j++)
 	                pw.println(tokens[j]);
 				
 				}
-			}		
+			}
+		}
 			b.close();
 			}
 				out.close();
+				pw.close();
+				s.close();
 			}
 
 		catch( IOException e ){
