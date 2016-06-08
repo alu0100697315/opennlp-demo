@@ -15,13 +15,27 @@ import opennlp.tools.tokenize.TokenizerModel;
 
 public class TokenizerMain {
 	
+	public static void Tokenizer(PrintWriter pw,String[] tokens,BufferedReader b,Tokenizer tokenizer) throws IOException{
+		String cadena;
+		while((cadena = b.readLine())!=null) {
+			tokens = tokenizer.tokenize(cadena);
+			
+			for( String token : tokens ){	
+				pw.println(token);
+				pw.flush();
+			}	
+		}
+	}
+	
+	public static String LeerFichero (String aux,Scanner s){
+		System.out.println(" ");
+		System.out.println("Introduce el nombre de un fichero: ");
+		System.out.println("Si quiere salir pulse 's'");
+		return aux;
+	}
 	
 	public static void main( String[] args ) throws Exception{
-		// the provided model
-		// InputStream modelIn = new FileInputStream( "models/en-token.bin" );
-		// the model we trained
 		InputStream modelIn = new FileInputStream( "models/en-token.model" );
-          
 		try{
 			TokenizerModel model = new TokenizerModel( modelIn );
 			Tokenizer tokenizer = new TokenizerME(model);
@@ -33,32 +47,19 @@ public class TokenizerMain {
 			fichero= new FileWriter ("fichero.txt");
 			pw = new PrintWriter(fichero);
 			
-			
 		while(aux != "s"){
-		System.out.println(" ");
-		System.out.println("Introduce el nombre de un fichero: ");
-		System.out.println("Si quiere salir pulse 's'");
+		LeerFichero(aux,s);	
 		aux=s.nextLine();
 
 		File archivo = new File(aux);
-		String cadena;
 		FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
-
+		
 			String[] tokens = null;
-			while((cadena = b.readLine())!=null) {
-				tokens = tokenizer.tokenize(cadena);
-				
-				for( String token : tokens ){	
-					pw.println(token);
-					pw.flush();
-				}
-				
-				
-		}
+			Tokenizer(pw,tokens,b, tokenizer);
 			pw.println("\n---OTRO FICHERO --- \n");
 			b.close();
-			}
+		}
 				pw.close();
 				s.close();
 			}
