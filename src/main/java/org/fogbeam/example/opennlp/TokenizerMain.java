@@ -12,6 +12,7 @@ import java.util.Scanner;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
+
 public class TokenizerMain {
 	
 	
