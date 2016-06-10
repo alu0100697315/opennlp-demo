@@ -1,4 +1,5 @@
-import static org.junit.Assert.*;
+//import org.junit.Assert.*;
+import junit.framework.*;
 
 import java.io.BufferedReader;
 import java.io.File;
