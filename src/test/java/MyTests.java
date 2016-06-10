@@ -1,5 +1,5 @@
 //import org.junit.Assert.*;
-import junit.framework.*;
+import org.junit.*;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 import org.fogbeam.example.opennlp.TokenizerMain;
-import org.junit.Test;
+
 
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
@@ -40,7 +40,7 @@ public class MyTests {
 		//assertTrue(archivo != null);
 	}
 	
-	//@Test
+	@Test
 	/**
 	 * Test para comprobar si se lee bien un fichero de entrada
 	 * @throws FileNotFoundException
@@ -56,7 +56,7 @@ public class MyTests {
 	/**
 	 * Test para el metodo menu
 	 */
-	@Test
+	//@Test
 	public void menu(){
 		Scanner s = new Scanner(System.in);
 		//assertTrue(TokenizerMain.LeerFichero("hola.txt", s) != null);
