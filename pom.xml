@@ -11,6 +11,11 @@
 			<artifactId>opennlp-tools</artifactId>
 			<version>1.5.3</version>
 		</dependency>
+		<dependency>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-resources-plugin</artifactId>
+    		<version>2.5</version>
+		</dependency>
 	</dependencies>
 
 </project>
