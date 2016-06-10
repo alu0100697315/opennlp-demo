@@ -45,7 +45,7 @@ public class TokenizerMain {
 	 * @param s
 	 * @return
 	 */
-	public static String LeerFichero (String aux,Scanner s){
+	public static String LeerFichero (String aux){
 		System.out.println(" ");
 		System.out.println("Introduce el nombre de un fichero: ");
 		System.out.println("Si quiere salir pulse 's'");
@@ -57,7 +57,7 @@ public class TokenizerMain {
 	 * @param args
 	 * @throws Exception
 	 */
-	public static void main( String[] args ) throws Exception{
+	public static void main( String[] args ) throws IOException{
 		InputStream modelIn = new FileInputStream( "models/en-token.model" );
 		try{
 			TokenizerModel model = new TokenizerModel( modelIn );
@@ -70,8 +70,9 @@ public class TokenizerMain {
 			fichero= new FileWriter ("fichero.txt");
 			pw = new PrintWriter(fichero);
 			
-		while(aux != "salir"){ //Con este bucle while permitimos que se puedas incluir varios ficheros
-		LeerFichero(aux,s);	
+		while(aux != "s"){ //Con este bucle while permitimos que se puedas incluir varios ficheros
+			
+		LeerFichero(aux);
 		aux=s.nextLine();
 		
 		File archivo = new File(aux);
@@ -88,7 +89,7 @@ public class TokenizerMain {
 			}
 
 		catch( IOException e ){
-			e.printStackTrace();
+			System.out.println("Error: Fichero no encontrado");
 		}
 		finally{
 			if( modelIn != null ){

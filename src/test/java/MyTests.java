@@ -3,20 +3,12 @@ import org.junit.*;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.Scanner;
+import java.io.IOException;
 
 import org.fogbeam.example.opennlp.TokenizerMain;
 
-
-import opennlp.tools.tokenize.Tokenizer;
-import opennlp.tools.tokenize.TokenizerME;
-import opennlp.tools.tokenize.TokenizerModel;
 
 
 public class MyTests {
@@ -45,12 +37,13 @@ public class MyTests {
 	 * Test para comprobar si se lee bien un fichero de entrada
 	 * @throws FileNotFoundException
 	 */
-	public void LecturaFichero() throws FileNotFoundException {
+	public void LecturaFichero() throws IOException {
 		System.out.println("Probando si se lee el fichero");
 		File archivo = new File("texto1.txt");
 		FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
 		assertTrue( f != null);
+		b.close();
 	}
 	
 	/**
@@ -58,7 +51,6 @@ public class MyTests {
 	 */
 	@Test
 	public void menu(){
-		Scanner s = new Scanner(System.in);
-		assertTrue(TokenizerMain.LeerFichero("hola.txt", s) != null);
+		assertTrue(TokenizerMain.LeerFichero("hola.txt") != null);
 	}
 }
