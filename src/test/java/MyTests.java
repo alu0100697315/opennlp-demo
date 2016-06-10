@@ -45,18 +45,18 @@ public class MyTests {
 	 * Test para comprobar si se lee bien un fichero de entrada
 	 * @throws FileNotFoundException
 	 */
-	/*public void LecturaFichero() throws FileNotFoundException {
+	public void LecturaFichero() throws FileNotFoundException {
 		System.out.println("Probando si se lee el fichero");
-		File archivo = new File("hola.txt");
+		File archivo = new File("texto1.txt");
 		FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
 		assertTrue( f != null);
 	}
-	*/
+	
 	/**
 	 * Test para el metodo menu
 	 */
-	//@Test
+	@Test
 	public void menu(){
 		Scanner s = new Scanner(System.in);
 		assertTrue(TokenizerMain.LeerFichero("hola.txt", s) != null);
