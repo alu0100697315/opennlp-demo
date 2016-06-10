@@ -21,7 +21,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 public class MyTests {
 	
 	
-	@org.junit.Test
+	@Test
 	/**
 	 * Test para un objeto de tipo TokenizerMain
 	 */
@@ -39,19 +39,19 @@ public class MyTests {
 		assertTrue(archivo != null);
 	}
 	
-	@Test
+	//@Test
 	/**
 	 * Test para comprobar si se lee bien un fichero de entrada
 	 * @throws FileNotFoundException
 	 */
-	public void LecturaFichero() throws FileNotFoundException {
+	/*public void LecturaFichero() throws FileNotFoundException {
 		System.out.println("Probando si se lee el fichero");
 		File archivo = new File("hola.txt");
 		FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
 		assertTrue( f != null);
 	}
-	
+	*/
 	/**
 	 * Test para el metodo menu
 	 */
