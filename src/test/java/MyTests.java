@@ -1,4 +1,4 @@
-//import org.junit.Assert.*;
+import org.junit.Assert.*;
 import org.junit.*;
 
 import java.io.BufferedReader;
