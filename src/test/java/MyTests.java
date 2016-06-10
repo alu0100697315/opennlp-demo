@@ -10,7 +10,6 @@ import java.io.IOException;
 import org.fogbeam.example.opennlp.TokenizerMain;
 
 
-
 public class MyTests {
 	
 	
@@ -38,7 +37,6 @@ public class MyTests {
 	 * @throws FileNotFoundException
 	 */
 	public void LecturaFichero() throws IOException {
-		System.out.println("Probando si se lee el fichero");
 		File archivo = new File("texto1.txt");
 		FileReader f = new FileReader(archivo);
 		BufferedReader b = new BufferedReader(f);
