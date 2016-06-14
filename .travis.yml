@@ -1,3 +1,5 @@
 language: java
-mvn install -DskipTests=true
-mvn test
+script: mvn test
+notifications:
+  email:
+    - alu0100697315@ull.edu.es
