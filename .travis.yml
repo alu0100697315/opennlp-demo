@@ -7,3 +7,5 @@ script:
    - mvn test
    - doxygen Doxyfile
 jdk: oraclejdk8
+notifications:
+  email: alu0100697315@ull.edu.es
