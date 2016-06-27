@@ -42,7 +42,6 @@ public class TokenizerMain {
 	/**
 	 * Metodo para mostrar el menu que indica al usuario que debe hacer
 	 * @param aux
-	 * @param s
 	 * @return
 	 */
 	public static String LeerFichero (String aux){
