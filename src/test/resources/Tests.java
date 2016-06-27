@@ -10,7 +10,7 @@ import java.io.IOException;
 import org.fogbeam.example.opennlp.TokenizerMain;
 
 
-public class MyTests {
+public class Tests {
 	
 	
 	@Test
