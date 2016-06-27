@@ -1,2 +1,9 @@
 language: java
-mvn test
+sudo: required
+install:
+   - sudo apt-get install --yes doxygen graphviz
+script: 
+   - jdk_switcher use oraclejdk8
+   - mvn test
+   - doxygen Doxyfile
+jdk: oraclejdk8
