@@ -1,10 +1,9 @@
 language: java
 sudo: required
-install:
-   - sudo apt-get install --yes doxygen graphviz
 script: 
    - jdk_switcher use oraclejdk8
    - mvn test
+   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
    - doxygen Doxyfile
 jdk: oraclejdk8
 notifications:
